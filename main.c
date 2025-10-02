@@ -3,24 +3,22 @@
 
 int main(int argc, char *argv[])
 {
-  int number1,number2,result;
-  char operator;
-  
-  printf("Enter the calculation:");
-  scanf("%i %c %i",&number1, &operator, &number2);
-  
-  if (operator == '+')
-   result = number1+number2;
-  else if(operator == '-')
-   result = number1-number2;
-  else if(operator == '/')
-   result = number1/number2;
-  else if(operator == '*')
-   result = number1*number2;
+  int answer=59, input, trial=0;
+
+  do{
       
-  printf("=%d\n", result);
-  
+   printf("Guess a number :");    
+   scanf("%i",&input);
+   trial++;
    
+   if (input > answer)
+    printf("high!\n");
+   else if (input < answer)
+    printf("low!\n");
+   }while(input!=answer);
+  
+  printf("Congratulation! trial:%d\n",trial);
+    
   system("PAUSE");	
   return 0;
 
