@@ -3,15 +3,22 @@
 
 int main(int argc, char *argv[])
 {
-  int number, i, sum=0;
+  int number1,number2,result;
+  char operator;
   
-  printf("Input a number:");
-  scanf("%i",&number);
+  printf("Enter the calculation:");
+  scanf("%i %c %i",&number1, &operator, &number2);
   
-  for (i=1;i<=number;i++)
-      sum = sum+i;
+  if (operator == '+')
+   result = number1+number2;
+  else if(operator == '-')
+   result = number1-number2;
+  else if(operator == '/')
+   result = number1/number2;
+  else if(operator == '*')
+   result = number1*number2;
       
-  printf("The result is %i\n", sum);
+  printf("=%d\n", result);
   
    
   system("PAUSE");	
